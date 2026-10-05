@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "functions": {
+    "Api/ai.js": { "maxDuration": 60 },
+    "Api/doc.js": { "maxDuration": 10 }
+  },
+  "rewrites": [
+    { "source": "/api/ai", "destination": "/Api/ai.js" },
+    { "source": "/api/doc", "destination": "/Api/doc.js" },
+    { "source": "/(.*)", "destination": "/Api/ai.js" }
+  ]
+}
